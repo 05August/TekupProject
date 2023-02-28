@@ -1,10 +1,45 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.App__container {
+  width: 90%;
+}
+
+.App__container .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.nav__item.active {
+  background: #F8D000;
+  color: #212529;
+  box-shadow: 0 1px 5px 0 rgb(0 0 0 / 15%) !important;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.App__container .grid-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.App__container .grid-card>div {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px 24px 15px;
+  flex-basis: 33%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,6 +67,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
